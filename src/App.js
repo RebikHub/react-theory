@@ -10,17 +10,10 @@ class App extends Component {
     return (
           <div style={divStyle}>
               <h1>Hello World!!!</h1>
+              <Car />
           </div>
         );
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//         <h1>Hello World!!!</h1>
-//     </div>
-//   );
-// }
 
 export default App;

@@ -1,7 +1,15 @@
-function car() {
-    return (
-        <h2>This is car component</h2>
-    )
-}
+import React from 'react';
 
-export default Car
+// function Car() {
+//     return (
+//         <h2>This is car component</h2>
+//     )
+// }
+
+// const car = () => <div>Cars worlds!!!</div>
+
+export default () => (
+    <div>
+        <h3>Cars worlds!!!</h3>
+    </div>
+)
