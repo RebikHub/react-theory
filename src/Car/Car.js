@@ -1,15 +1,14 @@
 import React from 'react';
 
-// function Car() {
-//     return (
-//         <h2>This is car component</h2>
-//     )
-// }
-
-// const car = () => <div>Cars worlds!!!</div>
-
+function getRandom(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random()*(max-min+1)) + min
+}
 export default () => (
     <div>
-        <h3>Cars worlds!!!</h3>
+        <p>{
+        (getRandom(0,100) >= 50)?"Yes":"No"
+        }</p>
     </div>
 )

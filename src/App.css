@@ -36,3 +36,26 @@
     transform: rotate(360deg);
   }
 }
+
+.App-btn {
+  width: 150px;
+  height: 40px;
+  background-color: #61dafb;
+  border-radius: 15px;
+  border-style: none;
+}
+
+.App-btn:hover {
+  border: grey solid 1px;
+}
+
+.App-div {
+  font-size: large;
+  margin-top: 40px;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
