@@ -34,7 +34,6 @@ export default function App() {
     setAnswer(obj.true > obj.false);
   }
   
-  console.log(rate().true > rate().false);
   return (
     <div className='App-div'>
         <h1>Predict</h1>
