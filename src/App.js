@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 export default function App() {
   const [answer, setAnswer] = useState(null);
+  const [loading, setLoading] = useState(false):
 
   function rate() {
     const ar = [];
@@ -31,14 +32,26 @@ export default function App() {
       true: Math.fround(percentOne.toFixed())
     };
 
-    setAnswer(obj.true > obj.false);
+    setLoading(true)
+
   }
+
+  useEffect(() => {
+    let timer = null
+    if (loading) {
+      timer = setTimeout(() => {
+          setLoading(false)
+          setAnswer(obj.true > obj.false)
+       }, 2000);
+    }
+    return () => clearTimeout(timer)
+  }, [loading])
   
   return (
     <div className='App-div'>
         <h1>Predict</h1>
         <div>
-          <p>{answer ? "Yes" : "No"}</p>
+          {loading ? <p>...Loading</p> : <p>{answer ? "Yes" : "No"}</p>}
         </div>
         <button className='App-btn'
         type='button'
